@@ -52,8 +52,7 @@ class InducedGraphAux:
             for j in self.hash_of_indexes[suffix_hash]:
                 if i == j:
                     continue
-                # prefix = self.reads_lst[j][:self.read_size - 1]
-                # suffix = self.reads_lst[i][1:]
+                    
                 if compare_reads(self.reads_lst[j], self.reads_lst[i], 1, self.read_size - 1):
                     if self.reads_lst[i] in graph.dict_graph:
                         continue
@@ -113,8 +112,6 @@ class InducedGraphAux:
                 for j in self.hash_of_indexes[hash_output]:
                     if i == j:
                         continue
-                    # prefix = self.reads_lst[j][:match_len]
-                    # suffix = self.reads_lst[i][self.read_size - match_len:]
 
                     if compare_reads(self.reads_lst[j], self.reads_lst[i], self.read_size - match_len, match_len):
                         edge = Edge(match_len, self.reads_lst[j])
