@@ -1,0 +1,32 @@
+strand length 		 success_rate 		 average time
+
+strand length 		 success_rate 		 average time
+
+strand length 		 success_rate 		 average time
+
+strand length 		 success_rate 		 average time
+
+250000					100.0					48.801862421035764
+strand length 		 success_rate 		 average time
+
+250000					100.0					48.801862421035764
+500000					100.0					87.38874117851257
+strand length 		 success_rate 		 average time
+
+250000					100.0					48.801862421035764
+500000					100.0					87.38874117851257
+750000					100.0					139.82026257514954
+strand length 		 success_rate 		 average time
+
+250000					100.0					48.801862421035764
+500000					100.0					87.38874117851257
+750000					100.0					139.82026257514954
+1000000					100.0					178.24641499519348
+strand length 		 success_rate 		 average time
+
+strand length 		 success_rate 		 average time
+
+strand length 		 success_rate 		 average time
+
+strand length 		 success_rate 		 average time
+

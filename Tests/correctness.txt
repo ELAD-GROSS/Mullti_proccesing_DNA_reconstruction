@@ -1,0 +1,7 @@
+ success_rate 		 average time
+
+ success_rate 		 average time
+
+strand length 		 success_rate 		 average time
+
+250000					100.0					20.151816344857217
