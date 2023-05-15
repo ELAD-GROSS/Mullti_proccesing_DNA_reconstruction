@@ -58,7 +58,6 @@ def finding_avg_miss_rate_of_declassified_reads(strand_len, frequencies, letter_
     """
     :return: the average miss rate of declassified reads
     """
-    #print(strand_len)
     data_to_return = dict()
     if string_input != "":
         original_str = string_input
