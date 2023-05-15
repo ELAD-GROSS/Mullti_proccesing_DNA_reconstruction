@@ -7,7 +7,6 @@ def remove_meta_data(sections_num, strings_list, frequency, letters_amount, read
 
 
 def remove_padding(sections_amount, strings_list, read_size, letters_amount, max_splits_arr):
-    print(max_splits_arr)
     first_section = 0
     last_section = sections_amount - 1
 
@@ -22,7 +21,6 @@ def remove_padding(sections_amount, strings_list, read_size, letters_amount, max
 
 
 def remove_classifications(sections_amount, strings_list, frequency, letters_amount):
-    # TODO: maybe there is a bug here as well?
     sections = []
     for section_num in range(sections_amount):
         sub_sections = textwrap.wrap(strings_list[section_num], width=frequency + letters_amount, break_long_words=True)

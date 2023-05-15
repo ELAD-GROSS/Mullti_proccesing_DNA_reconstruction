@@ -10,6 +10,7 @@ def run_algorithm(sections_num, letters_amount, real_edge_len, frequency, strand
     # declassify each read by its section
     four_pow = create_convert_list(read_size)
     try:
+        # classifications = create_longest_classifications(letters_amount, sections_num)
         longest_classifications = find_longest(letters_amount)
         classifications = longest_classifications[0: sections_num]
         paddings_hash = create_paddings_hash(classifications, padding_size)
@@ -22,16 +23,18 @@ def run_algorithm(sections_num, letters_amount, real_edge_len, frequency, strand
     except ValueError:
         print("Can't create this many sections with only this amount of letters")
         exit(0)
+
     reads_by_sections, max_splits_arr = declassify_reads(read_lst, frequency, letters_amount, classifications,
                                                          padding_size, paddings_hash, four_pow,
                                                          paddings_to_classifications, sections_num)
 
+    # run for each section Alex's algorithm
     strand_section_len_before = strand_len / sections_num
     special_section_length_no_padding = get_section_size(strand_section_len_before, frequency, letters_amount)
     complete_sections = run_parallel_algorithm(reads_by_sections, read_size, real_edge_len,
                                                special_section_length_no_padding, max_splits_arr)
 
-   
+
     if complete_sections is None:
         print("None, failed")
         return None
@@ -39,5 +42,4 @@ def run_algorithm(sections_num, letters_amount, real_edge_len, frequency, strand
 
     strand_rebuilt = remove_meta_data(sections_num, complete_sections, frequency, letters_amount, read_size,
                                       max_splits_arr)
-
     return strand_rebuilt

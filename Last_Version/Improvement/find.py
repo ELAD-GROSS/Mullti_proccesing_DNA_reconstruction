@@ -70,7 +70,6 @@ def is_good(lst):
     set_new = set()
     for i in range(len(lst) - 1):
         st_1 = lst[i] + lst[i + 1][1:]
-        # print(s)
         r = possible_rotation(st_1)
         for r in set_new:
             if r in set_new:

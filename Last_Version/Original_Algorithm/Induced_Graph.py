@@ -36,7 +36,6 @@ class InducedGraphAux:
 
     # second step in algorithm
     def second_step(self, graph):
-        # TODO: check if suffix == prefix, and if so continue without connecting edge
         for i in range(self.reads_number):
             read = self.reads_lst[i]
             prev_hash = self.last_prefix_hash[i]
@@ -71,7 +70,6 @@ class InducedGraphAux:
                     break
 
     def third_step(self, graph):
-        # TODO: check if suffix == prefix, and if so continue without connecting edge
         for match_len in range(self.read_size - 2, self.real_edge_size - 1, -1):
             self.hash_of_indexes = {}
 

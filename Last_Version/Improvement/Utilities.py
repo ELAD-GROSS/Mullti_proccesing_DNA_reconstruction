@@ -81,9 +81,7 @@ def compare_reads(prefix, suffix, suffix_start, len_match):
 # returns section len - read_size - letters_amount
 def get_section_size(strand_section_len_before, frequency, letters_amount):
     classify_meta_data_len = int((strand_section_len_before // frequency) * letters_amount)
-    # TODO: make sure that strand_section_len_before % frequency == 0
-    # if strand_section_len_before % frequency != 0:
-    #     classify_meta_data_len += letters_amount
+
 
     return int(strand_section_len_before + classify_meta_data_len) + letters_amount
 

@@ -17,7 +17,6 @@ def final_algorithm(strand_len, read_size, real_edge_length, reads_lst):
         if keys_size == 1:
             break
         if len(vertex) == strand_len:
-            print("the patch saved it")
             return {vertex}
 
     return create_guesses(final_directed_graph, strand_len)

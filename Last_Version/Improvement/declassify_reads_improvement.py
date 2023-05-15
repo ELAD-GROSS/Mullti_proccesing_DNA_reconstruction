@@ -11,7 +11,6 @@ def find_repetitive_letters(read, letters_amount, frequency, classifications):
         was_repetitive = True
 
         for j in range(i + frequency + letters_amount, len(read), frequency + letters_amount):
-            # TODO: check if splitting the read first can reduce time instead of copying
             temp = read[j:j + letters_amount]
 
             if len(temp) != len(candidate):
@@ -25,15 +24,13 @@ def find_repetitive_letters(read, letters_amount, frequency, classifications):
     return ""
 
 
-# TODO: check for this function
 def find_full_padding(read, padding_size, paddings_hash, four_pow):
     temp_hash = full_hash(read=read, pos=0, length=padding_size)
     for pos in range(1, len(read) - padding_size + 1):
         if temp_hash in paddings_hash:
             if read[pos - 1:pos - 1 + padding_size] in paddings_hash[temp_hash]:
                 return pos - 1
-        # check for pos+1
-        # TODO: check if this is correct
+
         temp_hash = shift_right_hash(read, pos, padding_size, temp_hash, four_pow)
     return NO_FULL_PADDING
 
@@ -138,8 +135,6 @@ def declassify_reads(reads, freq, letters_amount, classifications, padding_size,
             section_num = letters_to_section[pad_to_candidates[letters][1]]
             read_prev_section, read_next_section = split_read(read, letters, padding_pos_start, pad_to_candidates,
                                                               padding_size)
-            # TODO: check the indexes on the arrays
-            # TODO: add documentation
             if read_prev_section is not None and padding_pos_start > maxes_arr_indexes[section_num - 1][1]:
                 maxes_arr_reads[section_num - 1][1] = read_prev_section
                 maxes_arr_indexes[section_num - 1][1] = padding_pos_start

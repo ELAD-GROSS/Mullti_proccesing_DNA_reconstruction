@@ -40,18 +40,7 @@ def run_parallel_algorithm(reads_lst, read_size, real_edge_length, section_len_n
     complete_sections = []
 
     for section in range(section_amount):
-        # if 0 < section < section_amount - 1:
-        #     # TODO: subtract by letters_amount
-        #     section_len = special_sections_length + read_size
-        #
-        # else:
-        #     section_len = special_sections_length
-        #
-        # p = Process(target=run_section_algorithm,
-        #             args=(
-        #                 reads_lst[section], int(section_len), read_size,
-        #                 real_edge_length, shared_dict, section))
-        # processes.append(p)
+
         section_len = section_len_no_padding
 
         if section != section_amount - 1:

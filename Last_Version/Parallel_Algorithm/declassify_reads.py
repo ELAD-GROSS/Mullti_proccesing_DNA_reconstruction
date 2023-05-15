@@ -168,7 +168,6 @@ def declassify_reads(reads: list, num_of_sections, letters_amount, frequency, g_
             print(reads.index(read))
             print(read)
     # adding reads with a lot of padding: the first and last add one, other sections add two
-    # TODO: check if the change works, if not return column 2 to 1
 
     reads_by_sections[0].append(classifications[0] + padding[0:-letters_amount])
     paddings_by_sections[0][1].append(classifications[0] + padding[0:-letters_amount])

@@ -50,6 +50,8 @@ class InducedGraphAux:
 
             for j in self.hash_of_indexes[suffix_hash]:
 
+                # prefix = self.reads_lst[j][:self.read_size - 1]
+                # suffix = self.reads_lst[i][1:]
                 if compare_reads(self.reads_lst[j], self.reads_lst[i], 1, self.read_size - 1):
                     edge = Edge(self.read_size - 1, self.reads_lst[j])
 
@@ -68,6 +70,8 @@ class InducedGraphAux:
                     break
 
     def third_step(self, graph):
+
+
         for match_len in range(self.read_size - 2, self.real_edge_size - 1, -1):
             self.hash_of_indexes = {}
 
@@ -105,6 +109,8 @@ class InducedGraphAux:
 
                 # check for matches
                 for j in self.hash_of_indexes[hash_output]:
+                    # prefix = self.reads_lst[j][:match_len]
+                    # suffix = self.reads_lst[i][self.read_size - match_len:]
 
                     if compare_reads(self.reads_lst[j], self.reads_lst[i], self.read_size - match_len, match_len):
                         edge = Edge(match_len, self.reads_lst[j])

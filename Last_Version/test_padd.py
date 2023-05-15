@@ -33,7 +33,7 @@ def find_full_padding(read, padding_size, paddings_hash, four_pow):
             if read[pos-1:pos-1 + padding_size] in paddings_hash[temp_hash]:
                 return pos-1
         # check for pos+1
-        # TODO: check if this is correct
+
         temp_hash = shift_right_hash(read, pos , padding_size, temp_hash, four_pow)
     return -1
 
