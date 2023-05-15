@@ -49,8 +49,6 @@ class FinalDirectedGraph(Graph):
             vertex = edge.next_vertex
             if index > self.induced_graph.get_number_of_vertices():
                 # a very rare case
-                # print("ERROR---CYCLIC")
-                # return ""
                 continue
 
         return new_vertex
