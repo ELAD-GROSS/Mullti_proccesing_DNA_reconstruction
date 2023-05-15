@@ -2,10 +2,10 @@ import time
 
 # from Tests import Utilities_Test as ut
 import Utilities_Test as ut
-from Improvement import find_longest
-from Improvement import run_algorithm
-from Improvement import classify_strand
-from Original_Algorithm import algorithm
+from Final_Version import find_longest
+from Final_Version import run_algorithm
+from Final_Version import classify_strand
+from Original_Algorithm_Alex import algorithm
 
 NUM_TESTS = 25
 
